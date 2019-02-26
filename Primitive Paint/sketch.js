@@ -1,43 +1,45 @@
-// Project Title
-// Your Name
-// Date
+// Primitive paint
+// Aitazaz
+// 2/15/2019
 //
 // Extra for Experts:
-// - describe what you did to take this project "above and beyond"
-function setup(){
+// -
+function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   ellipseMode(CENTER);
 }
-
-function draw(){
+let shapeDrawn = true;
+function draw() {
   //background(255);
   textSize(40);
   textFont("Georgia");
   text("Aitazaz", 10, 30);
+  randomShapes();
 }
 
-function randomShape(){
-
+function randomShapes() {
+  fill(random(0, 355), random(0, 355), random(0, 355));
+  rect(random(0, windowWidth), random(0, windowHeight), random(10, 150), random(10, 150));
+  ellipse(random(0, windowWidth), random(0, windowHeight), random(10, 150), random(10, 150));
 }
 
 
 
-function keyTyped(){
-  if (key==="a"){
-    fill(random(0,355),random(0,355),random(0,355));
-    rect(mouseX,mouseY,75,100);
+function keyTyped() {
+  if (key === "a") {
+    fill(random(0, 355), random(0, 355), random(0, 355));
+    rect(mouseX, mouseY, 75, 100);
   }
-  else if (key==="s"){
-    fill(random(0,355),random(0,355),random(0,355));
-    ellipse(mouseX,mouseY,100,100);
+  else if (key === "s") {
+    fill(random(0, 355), random(0, 355), random(0, 355));
+    ellipse(mouseX, mouseY, 100, 100);
   }
-  else if (key==="d"){
-    fill(random(0,355),random(0,355),random(0,355));
+  else if (key === "d") {
+    fill(random(0, 355), random(0, 355), random(0, 355));
     quad(mouseX, mouseY, 86, 20, 69, 63, 30, 76);
   }
-  else if (key===" "){
+  else if (key === " ") {
     background(255);
   }
- 
 }
