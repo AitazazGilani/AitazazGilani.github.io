@@ -1,0 +1,29 @@
+let quad=1; //1 upper left //2 upper right // 3 down left //4 down right
+function setup() {
+  createCanvas(400, 400);
+}
+function drawSquares(){
+	if (quad===1){
+		fill(225);
+	}
+	rect();
+}
+function draw() {
+  background(220);
+	determineQuad();
+	print(quad);
+	drawSquares();
+}
+function determineQuad(){
+	if (mouseX<width/2){ //LEFT SIDE
+		if (mouseY<height/2){
+			quad=1;
+			
+		}
+		else quad=3;
+	}
+	else{
+		if (mouseY<height/2) quad=2;
+		else quad=4;
+		}
+}

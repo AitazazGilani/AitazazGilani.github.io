@@ -1,0 +1,16 @@
+function setup() {
+  createCanvas(400, 400);
+	noLoop();
+}
+
+let position=0;
+function draw() {
+	for(i=0;i<width;i++){
+		for(j=0;j<height;j++){
+			if(i%4===0 || j%4===0){
+				stroke(random(255),random(255),random(255));
+				point(i,j);
+			}
+		}
+	}
+}

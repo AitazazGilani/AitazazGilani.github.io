@@ -1,0 +1,40 @@
+let x=200;
+let y=200;
+let colors=[];
+
+function setup() {
+  createCanvas(400, 400);
+	colors.push(color(255,0,0));
+	colors.push(color(0,144,0));
+	colors.push(color(0,0,150));
+	colors.push(color(20,0,0));
+	colors.push(color(0,190,0));
+	
+}
+function drawTargetW(){
+	let diameter=200;
+	let counter=0;
+	
+	while (counter<5){
+		ellipse(width/2,height/2,diameter,diameter);
+		diameter-=40;
+		counter++;
+	}
+}
+function drawTargetF(){
+	for (let i=5; i>0; i--){
+		fill(colors[i-1]);
+		ellipse(x,y,i*40,i*40);
+	
+	}
+	
+	
+}
+
+	
+	
+	function draw() {
+  background(220);
+	drawTargetW();
+	drawTargetF();
+	}
