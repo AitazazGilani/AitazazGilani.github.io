@@ -115,3 +115,23 @@ function drawBasicGrid(shade) {
     line(0, y, width, y);
   }
 }
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+	face(20,100);
+}
+function face(x, y) {
+  //draw a face at x,y
+  push();
+  translate(x,y);
+  ellipseMode(CENTER);
+  fill(0);
+  stroke(0);
+  line(100,100,100,200);
+	triangle(30, 30, 58, 20, 80, 105);
+  pop();
+
+}

@@ -43,7 +43,7 @@ function mousePressed(){ // code for the mouse controls
   if (mouseButton=== LEFT){// decreases size of squares
     w=w/2;
     h=h/2;
-    pushToX=pushToX/2;
+    pushToX=pushToX/2; 
     pushToY=pushToY/2;
     grids();
   }

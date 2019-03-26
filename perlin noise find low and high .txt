@@ -1,0 +1,14 @@
+function findLowestIndex(nums){
+  let lowest=nums[0];
+  let lowestIndex=0;
+  for(let i=0;i<nums.length;i++){
+  	let cur=nums[i];
+    if (cur<lowest){
+      lowest=cur;
+      lowestIndex=i;
+    }
+  }
+  return lowestIndex;
+}
+
+http://abcicompsci.ca/exercise?name=findLowestIndex&title=Array-2
