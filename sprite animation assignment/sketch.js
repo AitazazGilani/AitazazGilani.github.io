@@ -24,26 +24,26 @@ let facingRight=true; // the charecter is facing right by defult.
 
 function setup() {
   createCanvas(windowWidth,windowHeight);
-  frameRate(15);
+  frameRate(17);
+  
   
 }
 
 function draw() {
+  
   background(0);
-  
-  image(castle,windowWidth/2,windowHeight/2);
-  //push();
-  //translate(width/2,height/2);
-  //scale(3);
-  
+  image(castle,0,0);
+  push();
+  translate(width/2,height/2);
+  scale(3);
   imageMode(CENTER);
   playerControls();
-  //pop();
+  pop();
+  
 }
 
 function preload(){
   castle = loadImage("assets/castle1.jpg");
-  castle.width*2;
   staticRight=loadImage("assets/static right.png");
   staticLeft=loadImage("assets/static left.png");
   for (let i=1;i<18;i++){
@@ -93,3 +93,7 @@ function playerControls(){
     }
   }
 }
+// function draculaCastle(){
+//   castle = loadImage("assets/castle1.jpg");
+//   
+// }
