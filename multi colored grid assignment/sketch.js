@@ -18,43 +18,50 @@ function setup() {
 
 function draw() {
   background(255);
-  grids();
-  keyPressed();
-  mousePressed();
+  grids2();
+  //keyPressed();
+  //mousePressed();
   
   
 
 }
-function grids() { // code for the grid itself
-  for (let x = 0; x < width; x += pushToX) {
-    for (let y = 0; y < height; y += pushToY) {
-      fill(random(0, 255),random(0, 255),random(0, 255));
-      rect(x, y, w, h);
-    }
+// function grids() { // code for the grid itself
+//   for (let x = 0; x < width; x += pushToX) {
+//     for (let y = 0; y < height; y += pushToY) {
+//       fill(random(0, 255),random(0, 255),random(0, 255));
+//       rect(x, y, w, h);
+//     }
+//   }
+// }
+
+
+// function keyPressed(){ // code controls the refresh (color change)
+//   grids();
+// }
+
+// function mousePressed(){ // code for the mouse controls
+//   if (mouseButton=== LEFT){// decreases size of squares
+//     w=w/2;
+//     h=h/2;
+//     pushToX=pushToX/2; 
+//     pushToY=pushToY/2;
+//     grids();
+//   }
+//   else if (mouseButton===RIGHT){// increases size of squares
+//     w=w*2;
+//     h=h*2;
+//     pushToX=pushToX*2;
+//     pushToY=pushToY*2;
+//     grids();
+//   }
+// }
+
+
+
+function grids2(){
+  //rectMode(CORNERS);
+  fill(0);
+  for (let y=windowHeight ;y<1;y-=50){
+    rect(0,y,50,-50);
   }
 }
-
-
-function keyPressed(){ // code controls the refresh (color change)
-  grids();
-}
-
-function mousePressed(){ // code for the mouse controls
-  if (mouseButton=== LEFT){// decreases size of squares
-    w=w/2;
-    h=h/2;
-    pushToX=pushToX/2; 
-    pushToY=pushToY/2;
-    grids();
-  }
-  else if (mouseButton===RIGHT){// increases size of squares
-    w=w*2;
-    h=h*2;
-    pushToX=pushToX*2;
-    pushToY=pushToY*2;
-    grids();
-  }
-}
-
-
-

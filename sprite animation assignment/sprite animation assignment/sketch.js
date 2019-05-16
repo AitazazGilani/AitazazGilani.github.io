@@ -36,7 +36,7 @@ function draw() {
   translate (width/2,height/2);
   scale(1.5);
   imageMode(CENTER);
-  image(castle,0,0);
+  image(castle,-x*5,0);
   pop();
 
   push(); //controls the size of alucard
@@ -106,3 +106,11 @@ function playerControls(){ // code for the player controls
 
   
 }
+//class endlessCastle(){
+
+
+
+
+
+  
+//}

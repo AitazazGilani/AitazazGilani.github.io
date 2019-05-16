@@ -10,7 +10,7 @@ function draw() {
   for (let currentBall of ballObjects){
     currentBall.move();
     currentBall.mouseOver();
-    //fill(random(255),random(255),random(255));
+    fill(random(255),random(255),random(255));
     currentBall.display();
   }
 }
