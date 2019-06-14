@@ -37,8 +37,9 @@ function randomizedGrid(){
 function draw() {
   background(220);
   randomizedGrid();
-  drawGrid();
   determineRect();
+  drawGrid();
+  //determineRect();
 }
 
 
@@ -76,7 +77,7 @@ function mousePressed(){
 function flip(col,row){
   if (col>=0 && col<NUM_COLS && row>=0 && row<NUM_ROWS ){
   if (randomGrid[row][col]===0){ //gridData[row][col]===0
-    randomFill=1;
+    randomFill=255;
   }
   else{
     randomFill=0;
